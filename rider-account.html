@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Account Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="fw-bolder text-white display-2">Manage Account</h1>
+        <div class="mt-5">
+            <a href="rider-bookings.html" id="bookings-link" class="btn btn-success mr-2">My Bookings (<span id="count-booking"></span>)</a>
+            <a href="rider-account.html" id="account-link" class="btn btn-primary mr-2">Manage Account</a>
+            <a href="#" id="logout-link" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+    <div class="container col-3 mb-5">
+        <div class="card p-5 mt-5">
+            <form id="register-form" action="php/update_rider.php" method="POST">
+                <div class="form-group">
+                    <label for="registerFullName">Full Name:</label>
+                    <input type="text" class="form-control" id="registerFullName" name="full_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerAddress">Address:</label>
+                    <input type="text" class="form-control" id="registerAddress" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Phone:</label>
+                    <input type="text" class="form-control" id="registerPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" class="form-control" id="registerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle">Vehicle Type:</label>
+                    <select class="form-control" id="vehicle" name="vehicle" required>
+                        <option value="car">Car</option>
+                        <option value="motorcycle">Motorcycle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="plate_num">Plate Number:</label>
+                    <input type="text" class="form-control" id="plate_num" name="plate_num" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Enter account password to verify:</label>
+                    <input type="password" class="form-control" id="registerPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+            <div id="response"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Ride Hailing App &copy; 2024
+    </footer>
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/rider-account.js"></script>
+</body>
+
+</html>
