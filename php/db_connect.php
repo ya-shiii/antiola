@@ -2,9 +2,9 @@
 
 // Database credentials
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ride_hailing";
+$username = "root"; //u663034616_antiola
+$password = ""; //5x:KlOgbH3M
+$dbname = "ride_hailing"; //u663034616_ride_hailing
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
