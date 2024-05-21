@@ -33,7 +33,7 @@ $(document).ready(function () {
                 // Loop through each user and populate cards
                 data.forEach(function (user) {
                     var car_card = `
-                        <div class="col-4 mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">4 Wheels - Car</h5>
@@ -45,7 +45,7 @@ $(document).ready(function () {
                             </div>
                         </div>`;
                     var car_card2 = `
-                        <div class="col-4 mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">4 Wheels - Car</h5>
@@ -57,7 +57,7 @@ $(document).ready(function () {
                             </div>
                         </div>`;
                     var motor_card = `
-                        <div class="col-4 mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">2 Wheels - Motorcycle</h5>
@@ -69,7 +69,7 @@ $(document).ready(function () {
                             </div>
                         </div>`; 
                         var motor_card2 = `
-                        <div class="col-4 mt-5">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">2 Wheels - Motorcycle</h5>

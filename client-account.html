@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Client Account</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -9,16 +11,17 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 text-center">
         <h1 class="fw-bolder text-white display-2">Manage Account</h1>
-        <div class="mt-5">
-            <a href="client-vehicles.html" id="avail-link" class="btn btn-warning mr-1">Available Vehicles (<span id="count-available"></span>)</a>
-            <a href="client-bookings.html" id="bookings-link" class="btn btn-success mr-1">My Bookings</a>
-            <a href="#" id="logout-link" class="btn btn-danger">Logout</a>
+        <div class="d-flex justify-content-center mt-5">
+            <a href="client-vehicles.html" id="avail-link" class="btn btn-warning mx-1 flex-fill">Available Vehicles (<span id="count-available"></span>)</a>
+            <a href="client-bookings.html" id="bookings-link" class="btn btn-success mx-1 flex-fill">My Bookings</a>
+            <a href="#" id="logout-link" class="btn btn-danger mx-1 flex-fill">Logout</a>
         </div>
     </div>
-    <div class="container col-3 mb-5">
-        <div class="card p-5 mt-5">
+    
+    <div class="container d-flex justify-content-center mb-5">
+        <div class="card p-5 mt-5 col-lg-6 col-md-8 col-sm-10 col-12">
             <form id="register-form" action="php/update_account.php" method="POST">
                 <div class="form-group">
                     <label for="registerFullName">Full Name:</label>
@@ -47,14 +50,13 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer text-center">
         Ride Hailing App &copy; 2024
     </footer>
 
-
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/client-account.js"></script>

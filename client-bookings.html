@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Book Now</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -9,13 +11,13 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 text-center">
         <p class="h2 fw-bolder text-white">Hello <span id="fullname-display"></span></p>
-        <p class="h2 fw-bolder text-white">Wanna go somewhere? Book a reservation now!</span></p>
-        <div class="mt-5">
-            <a href="client-vehicles.html" id="avail-link" class="btn btn-warning mr-1">Available Vehicles (<span id="count-available"></span>)</a>
-            <a href="client-account.html" id="account-link" class="btn btn-primary mr-1">Manage Account</a>
-            <a href="#" id="logout-link" class="btn btn-danger">Logout</a>
+        <p class="h2 fw-bolder text-white">Wanna go somewhere? Book a reservation now!</p>
+        <div class="d-flex justify-content-center mt-5">
+            <a href="client-vehicles.html" id="avail-link" class="btn btn-warning mx-1 flex-fill">Available Vehicles (<span id="count-available"></span>)</a>
+            <a href="client-account.html" id="account-link" class="btn btn-primary mx-1 flex-fill">Manage Account</a>
+            <a href="#" id="logout-link" class="btn btn-danger mx-1 flex-fill">Logout</a>
         </div>
     </div>
 
@@ -31,14 +33,13 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer text-center">
         Ride Hailing App &copy; 2024
     </footer>
 
-
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/client-bookings.js"></script>

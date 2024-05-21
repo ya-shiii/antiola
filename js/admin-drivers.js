@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     // Fetch and display full name on page load
     fetchFullName();
-    
+
     // Function to fetch and populate cards for users
     function fetchAndPopulateCards() {
         $.ajax({
@@ -33,7 +33,7 @@ $(document).ready(function () {
                 // Loop through each user and populate cards
                 data.forEach(function (user) {
                     var car_card = `
-                        <div class="col-4 mt-5">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">${user.full_name}</h5>
@@ -47,7 +47,7 @@ $(document).ready(function () {
                             </div>
                         </div>`;
                     var car_card2 = `
-                        <div class="col-4 mt-5">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">${user.full_name}</h5>
@@ -61,7 +61,7 @@ $(document).ready(function () {
                             </div>
                         </div>`;
                     var motor_card = `
-                        <div class="col-4 mt-5">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">${user.full_name}</h5>
@@ -73,9 +73,9 @@ $(document).ready(function () {
                                     <a href="#" class="btn btn-danger w-auto" onclick="dismissDriver(${user.u_id})">Dismiss from Service</a>
                                 </div>
                             </div>
-                        </div>`; 
-                        var motor_card2 = `
-                        <div class="col-4 mt-5">
+                        </div>`;
+                    var motor_card2 = `
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">${user.full_name}</h5>
@@ -123,14 +123,14 @@ $(document).ready(function () {
 function fetchDriverInfo(u_id) {
     $.ajax({
         type: 'POST',
-        url: 'php/fetch_driver_info.php', 
+        url: 'php/fetch_driver_info.php',
         data: { u_id: u_id },
         dataType: 'json',
-        success: function(response) {
+        success: function (response) {
             // Call editDriver function with fetched data
             editDriver(response);
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error(error);
         }
     });
@@ -138,7 +138,7 @@ function fetchDriverInfo(u_id) {
 
 function editDriver(driverInfo) {
     // Populate the edit modal with the fetched data
-    
+
     $('#user_id').val(driverInfo.u_id);
     $('#editDriverName').val(driverInfo.full_name);
     $('#editDriverUsername').val(driverInfo.u_name);
@@ -148,7 +148,7 @@ function editDriver(driverInfo) {
     $('#editDriverAddress').val(driverInfo.address);
     $('#editDriverVehicle').val(driverInfo.vehicle);
     $('#editDriverPlateNum').val(driverInfo.plate_num);
-    
+
     // Show the edit modal
     $('#editDriverModal').modal('show');
 }
@@ -161,13 +161,13 @@ function dismissDriver(u_id) {
             url: 'php/delete_driver.php', // Replace with your backend endpoint
             data: { u_id: u_id },
             dataType: 'json',
-            success: function(response) {
+            success: function (response) {
                 // Handle success response
                 console.log(response.message);
                 alert(response.message);
                 window.location.reload(); // Reload the page after deletion
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 // Handle error
                 console.error(error);
             }

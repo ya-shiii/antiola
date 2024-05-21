@@ -33,7 +33,7 @@ $(document).ready(function () {
                 // Loop through each user and populate cards
                 data.forEach(function (user) {
                     var card = `
-                        <div class="col-3 mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title text-success">${user.full_name}</h5>
@@ -46,7 +46,7 @@ $(document).ready(function () {
                             </div>
                         </div>`;
                     var deact_card = `
-                        <div class="col-3 mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title text-danger">${user.full_name}</h5>

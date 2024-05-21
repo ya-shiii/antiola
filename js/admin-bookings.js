@@ -32,15 +32,15 @@ $(document).ready(function () {
             success: function (data) {
                 // Loop through each booking and populate cards
                 data.forEach(function (booking) {
-                    var statusClass = booking.status === 'pending' ? 'text-warning' : 
-                        (booking.status === 'accepted' ? 'text-primary' : 
-                        (booking.status === 'completed' ? 'text-success' : 'text-danger'));
+                    var statusClass = booking.status === 'pending' ? 'text-warning' :
+                        (booking.status === 'accepted' ? 'text-primary' :
+                            (booking.status === 'completed' ? 'text-success' : 'text-danger'));
                     var statusText = booking.status.charAt(0).toUpperCase() + booking.status.slice(1);
                     var timeDifference = getTimeDifference(booking.booked_at);
                     var category = booking.vehicle === 'car' ? '4 Wheel - Car' : '2 Wheel - Motorcycle';
 
                     var card = `
-                        <div class="col-4 mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title fw-bolder">${timeDifference} ago</h5>

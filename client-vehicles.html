@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Ride Hailing App</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -9,13 +11,13 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 text-center">
         <p class="h2 fw-bolder text-white">Hello <span id="fullname-display"></span></p>
-        <p class="h2 fw-bolder text-white">These are the available vehicles</span></p>
-        <div class="mt-5">
-            <a href="client-bookings.html" id="bookings-link" class="btn btn-success mr-1">My Bookings</a>
-            <a href="client-account.html" id="account-link" class="btn btn-primary mr-1">Manage Account</a>
-            <a href="#" id="logout-link" class="btn btn-danger">Logout</a>
+        <p class="h2 fw-bolder text-white">These are the available vehicles</p>
+        <div class="d-flex justify-content-center mt-5">
+            <a href="client-bookings.html" id="bookings-link" class="btn btn-success mx-1 flex-fill">My Bookings</a>
+            <a href="client-account.html" id="account-link" class="btn btn-primary mx-1 flex-fill">Manage Account</a>
+            <a href="#" id="logout-link" class="btn btn-danger mx-1 flex-fill">Logout</a>
         </div>
     </div>
 
@@ -31,8 +33,7 @@
     </div>
 
     <!-- Modal for booking a driver -->
-    <div class="modal fade" id="bookDriverModal" tabindex="-1" role="dialog" aria-labelledby="bookDriverModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="bookDriverModal" tabindex="-1" role="dialog" aria-labelledby="bookDriverModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -69,19 +70,17 @@
                     </div>
                 </form>
             </div>
-            
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer text-center text-white mt-5">
         Ride Hailing App &copy; 2024
     </footer>
 
-
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/client-vehicles.js"></script>

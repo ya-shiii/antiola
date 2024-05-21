@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Ride Hailing App - Dashboard</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -9,96 +11,94 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h1 class="fw-bolder text-white">Dashboard</h1>
-        <p class="h2 fw-bolder text-white">Hello Master Noridel</p>
-        <a href="#" id="message-link" class="btn btn-primary mr-3" data-toggle="modal"
-            data-target="#editMessageModal">Edit Welcome Messages</a>
-        <a href="#" id="logout-link" class="btn btn-danger">Logout</a>
-    </div>
+    <div class="bg-image d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="container mt-5">
+            <h1 class="fw-bolder text-white">Dashboard</h1>
+            <p class="h2 fw-bolder text-white">Hello Master Noridel</p>
+            <div class="d-flex justify-content-center py-3">
+                <a href="#" id="message-link" class="btn btn-primary mr-3 h-full" data-toggle="modal" data-target="#editMessageModal">Edit Welcome Messages</a>
+                <a href="#" id="logout-link" class="btn btn-danger h-full">Logout</a>
+            </div>
+        </div>
 
-    <!-- Card-like div for statistics -->
-    <div class="container mt-5">
-        <div class="card bg-transparent">
-            <div class="card-body bg-transparent">
-                <h5 class="card-title text-white">Statistics</h5>
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted f2-bold">Registered Clients
-                                    <span id="registered-clients-count" class="card-text"></span>
-                                </h6>
-                                <a href="admin-clients.html" class="btn btn-primary w-auto">View Details</a>
+        <!-- Card-like div for statistics -->
+        <div class="container mt-5">
+            <div class="card bg-transparent">
+                <div class="card-body bg-transparent">
+                    <h5 class="card-title text-white">Statistics</h5>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted">Registered Clients
+                                        <span id="registered-clients-count" class="card-text"></span>
+                                    </h6>
+                                    <a href="admin-clients.html" class="btn btn-primary w-auto">View Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">Vehicles
-                                    <span id="vehicles-count" class="card-text"></span>
-                                </h6>
-                                <a href="admin-vehicles.html" class="btn btn-primary w-auto">View Details</a>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted">Vehicles
+                                        <span id="vehicles-count" class="card-text"></span>
+                                    </h6>
+                                    <a href="admin-vehicles.html" class="btn btn-primary w-auto">View Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">Drivers
-                                    <span id="drivers-count" class="card-text"></span>
-                                </h6>
-                                <a href="admin-drivers.html" class="btn btn-primary w-auto">View Details</a>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted">Drivers
+                                        <span id="drivers-count" class="card-text"></span>
+                                    </h6>
+                                    <a href="admin-drivers.html" class="btn btn-primary w-auto">View Details</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">Bookings
-                                    <span id="bookings-count" class="card-text"></span>
-                                </h6>
-                                <a href="admin-bookings.html" class="btn btn-primary w-auto">View Details</a>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted">Bookings
+                                        <span id="bookings-count" class="card-text"></span>
+                                    </h6>
+                                    <a href="admin-bookings.html" class="btn btn-primary w-auto">View Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="editMessageModal" tabindex="-1" role="dialog" aria-labelledby="editMessageModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editMessageModalLabel">Edit Welcome Messages</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        <!-- Modal -->
+        <div class="modal fade" id="editMessageModal" tabindex="-1" role="dialog" aria-labelledby="editMessageModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editMessageModalLabel">Edit Welcome Messages</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editMessageForm">
+                            <div class="form-group">
+                                <label for="welcomeMessage1">Client Welcome Message</label>
+                                <textarea class="form-control" id="welcomeMessage1" name="welcomeMessage1" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="welcomeMessage2">Rider Welcome Message</label>
+                                <textarea class="form-control" id="welcomeMessage2" name="welcomeMessage2" rows="3" required></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="saveMessageBtn">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form id="editMessageForm">
-                        <div class="form-group">
-                            <label for="welcomeMessage1">Client Welcome Message</label>
-                            <textarea class="form-control" id="welcomeMessage1" name="welcomeMessage1"
-                                rows="3" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="welcomeMessage2">Rider Welcome Message</label>
-                            <textarea class="form-control" id="welcomeMessage2" name="welcomeMessage2"
-                                rows="3" required></textarea>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" id="saveMessageBtn">Save Changes</button>
-                        </div>
-                    </form>
-                </div>
-
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/admin.js"></script>

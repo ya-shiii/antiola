@@ -2,7 +2,11 @@
 body {
     background-image: url('../img/bg.jpg');
     background-size: cover; /* Adjusts the background image to cover the entire container */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-repeat: no-repeat;
+    height: fit-content;
+    width: auto;
+    padding-bottom: 100px;
+    /* Prevents the background image from repeating */
 }
 .footer {
     position: fixed;
@@ -12,21 +16,4 @@ body {
     color: rgb(71, 198, 248);
     text-align: center;
     padding: 10px 0;
-}
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    #logout-link {
-        margin-top: 10px;
-    }
-    .card-columns {
-        column-count: 1;
-    }
-    .card-subtitle,
-    .card-text {
-      font-size: 1.5rem; /* Adjust the font size as needed */
-    }
 }

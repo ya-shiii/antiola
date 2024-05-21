@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Ride Hailing App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ride Hailing App - Vehicles</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -11,15 +13,15 @@
 <body>
     <div class="container mt-5">
         <h1 class="fw-bolder text-white">Our registered vehicles</h1>
-        <a href="admin-dashboard.html" class="btn btn-primary mr-2">Return</a>
-        <a href="#" id="logout-link" class="btn btn-danger mr-2">Logout</a>
-        <button id="add-link" class="btn btn-success" data-toggle="modal" data-target="#addDriverModal">Add Driver
-            +</button>
+        <div class="d-flex justify-content-start mb-3">
+            <a href="admin-dashboard.html" class="btn btn-primary mr-2 flex-fill">Return</a>
+            <a href="#" id="logout-link" class="btn btn-danger mr-2 flex-fill">Logout</a>
+            <button id="add-link" class="btn btn-success flex-fill" data-toggle="modal" data-target="#addDriverModal">Add Driver +</button>
+        </div>
     </div>
 
     <!-- Modal for adding a driver -->
-    <div class="modal fade" id="addDriverModal" tabindex="-1" role="dialog" aria-labelledby="addDriverModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="addDriverModal" tabindex="-1" role="dialog" aria-labelledby="addDriverModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -34,33 +36,27 @@
                         <!-- Form fields for driver details -->
                         <div class="form-group">
                             <label for="driverName">Driver Name</label>
-                            <input type="text" class="form-control" id="driverName" name="full_name" required
-                                placeholder="Enter driver name">
+                            <input type="text" class="form-control" id="driverName" name="full_name" required placeholder="Enter driver name">
                         </div>
                         <div class="form-group">
                             <label for="driverUsername">Username</label>
-                            <input type="text" class="form-control" id="driverUsername" name="u_name" required
-                                placeholder="Enter username">
+                            <input type="text" class="form-control" id="driverUsername" name="u_name" required placeholder="Enter username">
                         </div>
                         <div class="form-group">
                             <label for="driverPassword">Password</label>
-                            <input type="password" class="form-control" id="driverPassword" name="password" required
-                                placeholder="Enter password">
+                            <input type="password" class="form-control" id="driverPassword" name="password" required placeholder="Enter password">
                         </div>
                         <div class="form-group">
                             <label for="driverEmail">Email</label>
-                            <input type="email" class="form-control" id="driverEmail" name="email" required
-                                placeholder="Enter email">
+                            <input type="email" class="form-control" id="driverEmail" name="email" required placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="driverPhone">Phone</label>
-                            <input type="text" class="form-control" id="driverPhone" name="phone" required
-                                placeholder="Enter phone number">
+                            <input type="text" class="form-control" id="driverPhone" name="phone" required placeholder="Enter phone number">
                         </div>
                         <div class="form-group">
                             <label for="driverAddress">Address</label>
-                            <input type="text" class="form-control" id="driverAddress" name="address" required
-                                placeholder="Enter address">
+                            <input type="text" class="form-control" id="driverAddress" name="address" required placeholder="Enter address">
                         </div>
                         <div class="form-group">
                             <label for="driverVehicle">Vehicle</label>
@@ -71,8 +67,7 @@
                         </div>
                         <div class="form-group">
                             <label for="driverPlateNum">Plate Number</label>
-                            <input type="text" class="form-control" id="driverPlateNum" name="plate_num" required
-                                placeholder="Enter plate number">
+                            <input type="text" class="form-control" id="driverPlateNum" name="plate_num" required placeholder="Enter plate number">
                         </div>
                         <!-- Add more fields as needed -->
                 </div>
@@ -87,12 +82,8 @@
 
     <!-- Card-like div for statistics -->
     <div class="container mt-5">
-        <div class="card bg-transparent">
-            <div class="card-body bg-transparent">
-                <div class="row">
-                    <!-- Vehicle cards will be populated here -->
-                </div>
-            </div>
+        <div class="row">
+            <!-- Vehicle cards will be populated here -->
         </div>
     </div>
 
@@ -103,7 +94,7 @@
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/admin-vehicles.js"></script>
