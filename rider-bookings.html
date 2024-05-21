@@ -11,25 +11,23 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark text-white">
+<body class="bg-dark">
     <div class="container mt-5">
-        <h1 class="fw-bolder display-2">Hello Driver <span id="fullname-display"></span></h1>
+        <h1 class="fw-bolder display-4 text-white">Hello Driver <span id="fullname-display"></span></h1>
         <div class="mt-5">
-            <a href="rider-bookings.html" id="bookings-link" class="btn btn-success mr-2">My Bookings (<span id="count-booking"></span>)</a>
-            <a href="rider-account.html" id="account-link" class="btn btn-primary mr-2">Manage Account</a>
-            <a href="#" id="logout-link" class="btn btn-danger">Logout</a>
+            <a href="#booking-section" id="bookings-link" class="btn btn-success mr-2 mt-2">My Bookings (<span
+                    id="count-booking"></span>)</a>
+            <a href="rider-account.html" id="account-link" class="btn btn-primary mr-2 mt-2">Manage Account</a>
+            <a href="#" id="logout-link" class="btn btn-danger mt-2">Logout</a>
         </div>
     </div>
 
     <!-- Card-like div for statistics -->
-    <div class="container mt-5">
-        <div class="card bg-transparent border-0">
-            <div class="card-body">
-                <div class="row">
-                    <!-- Booking cards will be populated here -->
-                </div>
-            </div>
+    <div class="container mt-5"  id="booking-section">
+        <div class="row">
+            <!-- Booking cards will be populated here -->
         </div>
+
     </div>
 
     <!-- Footer -->
